@@ -1,0 +1,50 @@
+.button_primary {
+  width: 180px;
+  height: auto;
+  background: $color-button;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  user-select: none;
+  color: $color-light-text;
+}
+
+.button_primary:hover {
+  cursor: pointer;
+  background-color: $color-button_hover;
+}
+
+.button_close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  font-size: 20px;
+  border: 0;
+
+  @media (max-width: $contentModal-width) {
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.button_close:hover {
+  cursor: pointer;
+}

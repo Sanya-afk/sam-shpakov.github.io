@@ -1,0 +1,42 @@
+[
+  {
+    "id": "gem-puzzle",
+    "img": "./assets/images/gem-puzzle.png",
+    "time": " 30 hours",
+    "category": "react, redux, typescript",
+    "description": "This is a classic tag game. Created from scratch, React, redax,Ant desing, TypeScript were used. Educational project.",
+    "demo": "https://skaymant-gem-puzzle.netlify.app/",
+    "code": "https://github.com/SkaymanT/gem-puzzle",
+    "stack": ["Ant Design", "React", "Redux", "TypeScript"]
+  },
+  {
+    "id": "fancy-weather",
+    "img": "./assets/images/fancy-weather.png",
+    "time": " 40 hours",
+    "category": "typescript",
+    "description": "This is a weather app. Created from scratch, TypeScript were used. Educational project.",
+    "demo": "https://skaymant-fancy-weather-develop.netlify.app/",
+    "code": "https://github.com/SkaymanT/fancy-weather",
+    "stack": ["TypeScript"]
+  },
+  {
+    "id": "english-for-kids",
+    "img": "./assets/images/english-for-kids.png",
+    "time": " 40 hours",
+    "category": "javascript",
+    "description": "This is a English learning app. Created from scratch, TypeScript were used. Educational project.",
+    "demo": "https://skaymant-english-for-kids-develop.netlify.app/",
+    "code": "https://github.com/SkaymanT/english-for-kids",
+    "stack": ["JavaScript"]
+  },
+  {
+    "id": "songbird",
+    "img": "./assets/images/songbird.png",
+    "time": " 20 ho urs",
+    "category": "react, typescript",
+    "description": "This is a song bird learning app. Created from scratch, TypeScript were used. Educational project.",
+    "demo": "https://skaymant-songbird.netlify.app/",
+    "code": "https://github.com/SkaymanT/songbird",
+    "stack": ["React", "TypeScript"]
+  }
+]

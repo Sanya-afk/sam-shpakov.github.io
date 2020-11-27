@@ -1,0 +1,16 @@
+[
+  {
+    "id": "certificate-javascript",
+    "img": "./assets/images/certificate-javascript.jpg",
+    "date": " 31, July 2020",
+    "category": "JavaScript",
+    "certificate": "https://app.rs.school/certificate/ylukmrad"
+  },
+  {
+    "id": "certificate-react",
+    "img": "./assets/images/certificate-react.jpg",
+    "date": " 26, October 2020",
+    "category": "React",
+    "certificate": "https://app.rs.school/certificate/73px59k7"
+  }
+]

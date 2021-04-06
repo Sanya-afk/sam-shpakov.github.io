@@ -1,17 +1,13 @@
 .contact {
   padding-top: 80px;
-  background-image: url("./assets/images/2.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgb(255, 255, 255);
 
   &__name {
     text-align: center;
     padding: 10px 20px;
     text-transform: uppercase;
     font-weight: 500;
-    color: $color-primary;
+    color: $light-gray;
     font-size: 2em;
     font-weight: 550;
 
@@ -56,8 +52,7 @@
   &__info {
     font-size: 22px;
     font-weight: 400;
-    background: rgba(0, 0, 0, 0.4);
-    color: $color-primary;
+    color: $light-gray;
     padding: 20px;
     text-align: center;
     margin: 0 100px;
@@ -89,7 +84,7 @@
     font-size: 18px;
     font-weight: 400;
     font-style: italic;
-    color: $color-primary;
+    color: $light-gray;
     padding: 20px;
     text-align: center;
     margin: 0 100px;
@@ -117,7 +112,6 @@
     list-style-type: none;
     text-align: center;
     padding: 30px 20px;
-    text-shadow: $text-shadow;
 
     @media (max-width: $tablet-width) {
       flex-direction: column;
@@ -158,6 +152,7 @@
   .contact_phone,
   .contact_email,
   .contact_telegram {
-    color: $color-primary;
+    color: $light-gray;
+    font-weight: 500;
   }
 }

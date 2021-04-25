@@ -1,0 +1,104 @@
+.interest {
+  background-color: transparent;
+  margin: 0 20px;
+  padding: 30px 0;
+  padding-top: 80px;
+
+  &__name {
+    text-align: center;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $light-gray;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 550;
+
+    transform: scale(0);
+    transition: all 0.8s ease 0s;
+
+    &.anim-active {
+      transform: scale(1);
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__card {
+    padding: 30px 20px 20px 20px;
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #fff;
+    transition: box-shadow 0.25s;
+    border-radius: 2px;
+    box-shadow: $card-shadow;
+  }
+
+  &_subtitle {
+    width: 100%;
+    height: auto;
+    padding: 0 80px;
+    margin: 20px 0;
+    text-align: center;
+    color: $light-gray;
+    font-weight: 300;
+
+    @media (max-width: $tablet-width) {
+      padding: 0 5px;
+      text-align: justify;
+    }
+  }
+
+  .list-inline {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 1px;
+    list-style: none;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    li {
+      margin: 10px 15px;
+      display: flex;
+      flex-direction: column;
+      color: $light-gray;
+      transform: scale(0);
+    }
+
+    &.anim-active {
+      li {
+        @for $let from 1 to 8 {
+          $delay: $let * 0.2;
+          &:nth-child(#{$let}) {
+            @if $let==1 {
+              transition: all 0.8s ease 0s;
+            } @else {
+              transition: all 0.8s ease #{$delay + s};
+            }
+          }
+        }
+      }
+    }
+
+    &.anim-active li {
+      transform: scale(1);
+    }
+
+    @media (max-width: $tablet-width) {
+      justify-content: center;
+      li {
+        width: 80px;
+      }
+    }
+  }
+}

@@ -1,1 +1,1 @@
-## [Sam Shpakov](https://skaymant.github.io/)
+## [Sam Shpakov](https://sam-shpakov.github.io/)

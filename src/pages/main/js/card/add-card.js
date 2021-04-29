@@ -5,7 +5,7 @@ export function generateCards(items) {
   items.forEach((element) => {
     let item = createDomNode(item, 'a', 'filter-item', 'active-item');
     item.dataset.category = element.category;
-    item.href = '/work.html';
+    // item.href = '/work.html';
 
     let card = createDomNode(card, 'div', 'card');
     card.id = element.id;

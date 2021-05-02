@@ -1,0 +1,143 @@
+.project {
+  padding-top: 80px;
+  background: #f5f5f5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+  height: 110vh;
+
+  &-title {
+    text-align: center;
+    padding: 40px 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #606060;
+    margin: 30px 0;
+    font-size: 2em;
+    font-weight: 550;
+    transform: scale(0);
+    transition: all 0.8s ease 0s;
+
+    @media (max-width: $contentModal-width) {
+      padding: 40px 40px;
+    }
+
+    &.anim-active {
+      transform: scale(1);
+    }
+  }
+
+  &-body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    @media (max-width: $contentModal-width) {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  }
+
+  &-img {
+    width: 66%;
+    height: 66%;
+    padding-right: 15px;
+    padding-left: 15px;
+    transform: scale(0);
+    transition: all 0.8s ease 0s;
+
+    &.anim-active {
+      transform: scale(1);
+    }
+
+    @media (max-width: $contentModal-width) {
+      width: 100%;
+    }
+
+    @media (max-width: $mobile-big-width) {
+      padding: 0;
+    }
+  }
+
+  &-info {
+    position: relative;
+    width: 33.33333333%;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: $color-dark-text;
+
+    @media (max-width: $contentModal-width) {
+      width: 100%;
+    }
+  }
+
+  .info-paragraph {
+    margin: 10px 0;
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0.3s;
+    line-height: 115%;
+
+    &.anim-active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+    @media (max-width: $content-width) {
+      margin-top: 20px;
+      font-size: 13px;
+      line-height: 115%;
+    }
+    @media (max-width: $tablet-width) {
+      margin-top: 10px;
+      text-align: justify;
+    }
+  }
+
+  .info-list {
+    margin-bottom: 20px;
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0.3s;
+
+    &.anim-active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+
+    li {
+      color: $color-primary;
+    }
+    li h5 {
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: $color-dark-text;
+      span {
+        font-weight: 400;
+      }
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-top: 10px;
+      text-align: start;
+      li h5 {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .buttons_modal {
+    margin-bottom: 20px;
+
+    & a {
+      margin: 10px 10px 0 0;
+      transform: scale(0);
+      transition: all 0.8s ease 0s;
+
+      &.anim-active {
+        transform: scale(1);
+      }
+    }
+  }
+}

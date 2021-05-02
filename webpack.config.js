@@ -11,8 +11,7 @@ module.exports = (env, options) => {
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? false : 'source-map',
     entry: {
-      main: ['./src/pages/main/sass/index.scss', './src/pages/main/index.js'],
-      work: ['./src/pages/work/sass/index.scss', './src/pages/work/index.js'],
+      main: ['./src/sass/index.scss', './src/index.js'],
     },
     output: {
       filename: '[name].js',
@@ -52,21 +51,21 @@ module.exports = (env, options) => {
         },
       ],
     },
+    devServer: {
+      port: 3000,
+      contentBase: path.join(__dirname, 'dist'),
+      historyApiFallback: true,
+    },
     plugins: [
       new CleanWebpackPlugin(),
       new HTMLWebpackPlugin({
-        template: __dirname + '/src/pages/main/index.html',
+        template: __dirname + '/src/index.html',
         filename: 'index.html',
         minify: isProduction,
         chunks: ['main'],
       }),
-      new HTMLWebpackPlugin({
-        template: __dirname + '/src/pages/work/index.html',
-        filename: 'work.html',
-        minify: isProduction,
-        chunks: ['work'],
-      }),
       new CopyPlugin({ patterns: [{ from: './src/assets', to: 'assets' }] }),
+      new CopyPlugin({ patterns: [{ from: './src/404', to: '' }] }),
       new MiniCssExtractPlugin({
         filename: '[name].css',
         chunkFilename: '[id].css',

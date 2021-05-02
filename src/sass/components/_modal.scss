@@ -1,0 +1,68 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+
+  .overlay:hover {
+    cursor: pointer;
+  }
+
+  .modal {
+    position: relative;
+    border-radius: 3px;
+    background-color: $color-modal;
+    width: 950px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: $contentModal-width) {
+      width: 630px;
+    }
+
+    @media (max-width: $tablet-width) {
+      width: 100%;
+      margin: 10px;
+    }
+    transition: all 500ms ease-in;
+    transform: scale3d(0, 0, 0);
+  }
+
+  .modal:hover {
+    cursor: auto;
+  }
+
+  .modal__close {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    align-self: flex-end;
+    cursor: pointer;
+    outline: none;
+
+    @media (max-width: $contentModal-width) {
+      width: 30px;
+      height: 30px;
+    }
+    @media (max-width: $tablet-width) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .modal__content {
+    width: 100%;
+  }
+
+  .open {
+    transform: scale3d(1, 1, 1);
+  }
+}

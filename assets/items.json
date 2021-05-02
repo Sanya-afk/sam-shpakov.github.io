@@ -28,15 +28,5 @@
     "demo": "https://sam-shpakov-english-for-kids.netlify.app/",
     "code": "https://github.com/Sam-Shpakov/english-for-kids",
     "stack": ["JavaScript"]
-  },
-  {
-    "id": "songbird",
-    "img": "./assets/images/songbird.png",
-    "time": " 20 hours",
-    "category": "react, typescript",
-    "description": "This is a song bird learning app. Created from scratch, TypeScript were used.",
-    "demo": "https://sam-shpakov-songbird.netlify.app",
-    "code": "https://github.com/Sam-Shpakov/songbird",
-    "stack": ["React", "TypeScript"]
   }
 ]

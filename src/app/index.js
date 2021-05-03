@@ -1,6 +1,6 @@
 export {
   menuClickHandler,
-  addCard,
+  addCards,
   addCardClickHandler,
   addCertificateClickHandler,
   logoClickHandler,

@@ -1,4 +1,4 @@
-import { mainHTML } from './main';
+import { mainHTML } from "./main";
 import {
   menuClickHandler,
   parallaxMoveHandler,
@@ -6,18 +6,18 @@ import {
   onScrollHandler,
   addCardClickHandler,
   onScrollAnimationHandler,
-  addCard,
+  addCards,
   addCertificateClickHandler,
-} from '../../../app';
+} from "../../../app";
 
 export function mainPage(rootDiv) {
   rootDiv.innerHTML = mainHTML;
-  addCard();
+  addCards();
+  addCardClickHandler();
   menuClickHandler();
   parallaxMoveHandler();
   filterCardHandler();
   onScrollHandler();
   onScrollAnimationHandler();
-  addCardClickHandler();
   addCertificateClickHandler();
 }

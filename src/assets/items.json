@@ -4,7 +4,7 @@
     "img": "./assets/images/gem-puzzle.png",
     "time": " 30 hours",
     "category": "react, redux, typescript",
-    "description": "This is a classic tag game. Created from scratch, React, redax,Ant desing, TypeScript were used.",
+    "description": "This is a classic tag game. There are various levels of difficulty. There is also an autocomplete game. Created from scratch, React, redax,Ant desing, TypeScript were used.",
     "demo": "https://sam-shpakov-gem-puzzle.netlify.app",
     "code": "https://github.com/Sam-Shpakov/gem-puzzle",
     "stack": ["Ant Design", "React", "Redux", "TypeScript"]
@@ -14,7 +14,7 @@
     "img": "./assets/images/fancy-weather.png",
     "time": " 40 hours",
     "category": "typescript",
-    "description": "This is a weather app. Created from scratch, TypeScript were used.",
+    "description": "Fancy Weather is a weather forecast. You need to choose a city, it is possible to choose by voice, the application will show a detailed forecast for the selected city, as well as its coordinates and its location. The background image also changes, depending on the weather at the moment. There are 3 languages available.",
     "demo": "https://sam-shpakov-fancy-weather.netlify.app/",
     "code": "https://github.com/Sam-Shpakov/fancy-weather",
     "stack": ["TypeScript"]
@@ -24,7 +24,7 @@
     "img": "./assets/images/english-for-kids.png",
     "time": " 40 hours",
     "category": "javascript",
-    "description": "This is a English learning app. Created from scratch, JavaScript were used.",
+    "description": "English for kids website is a word learning mini game for kids. It contains 8 categories, in each of which you will see 8 cards. When you click on the card, the word depicted on it is played, when you click on a special symbol, you can find out the translation of the word. The game has 2 modes, training and games. In the game mode, you need to guess the words. There are also statistics.",
     "demo": "https://sam-shpakov-english-for-kids.netlify.app/",
     "code": "https://github.com/Sam-Shpakov/english-for-kids",
     "stack": ["JavaScript"]
@@ -34,9 +34,19 @@
     "img": "./assets/images/songbird.png",
     "time": " 20 hours",
     "category": "react, typescript",
-    "description": "This is a song bird learning app. Created from scratch, TypeScript were used.",
+    "description": "Songbird website is a quiz about birds. It contains 6 levels in each you hear a bird singing. You need to choose a kind of bird that sounds like the one on the audio file. However you answered, you can see information about the bird you chose such as name, Latin name, image, description, and audio. If you answered correctly you can go to the next level by clicking on the \"Next level\" button.",
     "demo": "https://sam-shpakov-songbird.netlify.app",
     "code": "https://github.com/Sam-Shpakov/songbird",
     "stack": ["React", "TypeScript"]
+  },
+  {
+    "id": "cv-site",
+    "img": "./assets/images/cv-site.png",
+    "time": " 30 hours",
+    "category": "javascript",
+    "description": "One-page resume site with animation, written without using libraries.",
+    "demo": "https://cv-site-bond.netlify.app",
+    "code": "https://github.com/Sam-Shpakov/cv-site",
+    "stack": ["JavaScript"]
   }
 ]

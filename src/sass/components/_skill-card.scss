@@ -21,7 +21,7 @@
 
   .skill-title {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
     font-weight: 600;
     font-family: $fontFamily;
@@ -30,59 +30,35 @@
   }
 
   .skill-progress-div {
-    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 45px;
 
-    p {
-      color: #ffffff;
-      font-family: $fontFamily;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 0.9375rem;
-      line-height: 160%;
-      display: flex;
-      justify-content: space-between;
+    @media (max-width: $mobile-big-width) {
+      padding: 0 25px;
     }
-  }
 
-  .skill-progress {
-    position: relative;
-    background-color: #1c1c1c;
-    margin: 15px 0;
-    height: 3px;
-    z-index: 0;
-    overflow: visible;
-    display: block;
-    width: 100%;
-    border-radius: 2px;
-  }
-  .skill-determinate {
-    position: absolute;
-    background-color: inherit;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #ffffff;
-    transition: width 0.3s linear;
-    height: 3px;
-
-    .skill-determinate-circle {
-      position: absolute;
-      right: 0%;
-      top: -7px;
-      font-size: 18px;
-      background-color: $color-primary;
-      width: 18px;
-      height: 18px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      border-radius: 50%;
-
-      transform: translate(10px, 0px) scale(0);
-      transition: all 0.8s ease 0s;
+    li {
+      transform: translate(0px, 120%);
+      opacity: 0;
+      transition: all 0.8s ease 0.3s;
+      line-height: 115%;
 
       &.anim-active {
-        transform: translate(0px, 0px) scale(1);
+        transform: translate(0px, 0px);
+        opacity: 1;
+      }
+      .skill-name {
+        color: #ffffff;
+        font-family: $fontFamily;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 160%;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0px;
       }
     }
   }

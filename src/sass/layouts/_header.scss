@@ -8,6 +8,7 @@
   z-index: 3;
   background: $color-background;
   border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+  -webkit-transform: translateZ(100px);
 
   .header_wrapper {
     position: relative;

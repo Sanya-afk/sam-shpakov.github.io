@@ -9,6 +9,7 @@ module.exports = (env, options) => {
   const config = {
     mode: isProduction ? "production" : "development",
     devtool: isProduction ? false : "source-map",
+    target: isProduction ? "browserslist" : "web",
     entry: {
       main: ["./src/sass/index.scss", "./src/index.js"],
     },

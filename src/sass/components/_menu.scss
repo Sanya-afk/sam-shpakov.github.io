@@ -27,18 +27,19 @@
       z-index: 3;
       width: 30px;
       height: 2px;
+
       background-color: $color-dark-text;
 
       transition-duration: 0.3s;
     }
 
     span::before {
-      content: '';
+      content: "";
       top: -10px;
     }
 
     span::after {
-      content: '';
+      content: "";
       top: 10px;
     }
   }
@@ -60,6 +61,29 @@
       visibility: hidden;
     }
 
+    .navigation__container {
+      visibility: visible;
+      display: flex;
+      width: 32.68rem;
+      justify-content: space-between;
+      list-style-type: none;
+
+      @media (max-width: $tablet-width) {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        color: $color-dark-text;
+        width: 320px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: $color-light-text;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+        transition-duration: 0.3s;
+        z-index: 2;
+      }
+    }
+
     .navigation {
       visibility: visible;
       display: flex;
@@ -68,26 +92,20 @@
       list-style-type: none;
 
       @media (max-width: $tablet-width) {
+        width: 320px;
+        height: calc(100% - 80px);
+        position: relative;
+        top: 80px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: 100%;
-        color: $color-dark-text;
-        width: 320px;
-        height: 100%;
-
+        color: $color-light-s;
+        overflow: scroll;
         margin: 0;
         padding: 0;
 
         list-style: none;
-
-        background-color: $color-light-text;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-        transition-duration: 0.3s;
-        z-index: 2;
       }
 
       &__item {
@@ -113,6 +131,13 @@
           transition-duration: 0.25s;
         }
       }
+
+      &__item:first-child {
+        @media (max-width: $tablet-width) {
+          margin-top: 10px;
+        }
+      }
+
       &__item:first-letter {
         text-transform: uppercase;
       }
@@ -147,7 +172,7 @@
 
   #menu__toggle:checked ~ .menu__container {
     visibility: visible;
-    .navigation {
+    .navigation__container {
       visibility: visible;
       left: calc(100% - 320px);
     }

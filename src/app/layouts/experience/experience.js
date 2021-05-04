@@ -1,7 +1,7 @@
-let experiance = `
-<section class="experiance" id="experiance">
-<div class="wrapper experiance__wrapper">
-  <h2 class="project-name anim-items">experiance</h2>
+let experience = `
+<section class="experience" id="experience">
+<div class="wrapper experience__wrapper">
+  <h2 class="project-name anim-items">experience</h2>
   <div class="timeline">
     <ul>
       <li class="anim-items">
@@ -35,4 +35,4 @@ let experiance = `
 </section>
 `;
 
-export { experiance };
+export { experience };

@@ -25,8 +25,8 @@ let header = `
             <a href="/#skills" class="navigation__item_link">skills</a>
           </li>
           <li class="navigation__item">
-            <a href="/#experiance" class="navigation__item_link"
-              >experiance</a
+            <a href="/#experience" class="navigation__item_link"
+              >experience</a
             >
           </li>
           <li class="navigation__item">

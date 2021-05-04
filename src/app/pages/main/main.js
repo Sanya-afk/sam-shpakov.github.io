@@ -3,12 +3,12 @@ import {
   about,
   portfolios,
   skills,
-  experiance,
+  experience,
   education,
   contact,
-} from '../../layouts';
+} from "../../layouts";
 
 let mainHTML =
-  header + about + portfolios + skills + experiance + education + contact;
+  header + about + portfolios + skills + experience + education + contact;
 
 export { mainHTML };

@@ -67,15 +67,7 @@
     padding-right: 15px;
     padding-left: 15px;
     color: $color-dark-text;
-
-    @media (max-width: $contentModal-width) {
-      width: 100%;
-    }
-  }
-
-  .info-paragraph {
-    margin: 10px 0;
-    transform: translate(0px, 120%);
+    transform: translate(0px, 100%);
     opacity: 0;
     transition: all 0.8s ease 0.3s;
     line-height: 115%;
@@ -84,6 +76,15 @@
       transform: translate(0px, 0px);
       opacity: 1;
     }
+
+    @media (max-width: $contentModal-width) {
+      width: 100%;
+    }
+  }
+
+  .info-paragraph {
+    margin: 10px 0;
+
     @media (max-width: $content-width) {
       margin-top: 20px;
       font-size: 13px;
@@ -97,14 +98,6 @@
 
   .info-list {
     margin: 20px 0;
-    transform: translate(0px, 120%);
-    opacity: 0;
-    transition: all 0.8s ease 0.3s;
-
-    &.anim-active {
-      transform: translate(0px, 0px);
-      opacity: 1;
-    }
 
     li {
       color: transparent;
@@ -132,12 +125,6 @@
 
     & a {
       margin: 10px 10px 0 0;
-      transform: scale(0);
-      transition: all 0.8s ease 0s;
-
-      &.anim-active {
-        transform: scale(1);
-      }
     }
   }
 }

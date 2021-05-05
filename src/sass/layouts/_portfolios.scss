@@ -58,10 +58,11 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 5px;
-    min-height: 750px;
+    min-height: 350px;
 
     @media (max-width: $tablet-width) {
       flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
       margin: 0;
     }

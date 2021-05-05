@@ -32,6 +32,10 @@
 
   &__title:hover {
     opacity: 1;
+
+    @media (max-width: $mobile-big-width) {
+      opacity: 0;
+    }
   }
 
   &__image {

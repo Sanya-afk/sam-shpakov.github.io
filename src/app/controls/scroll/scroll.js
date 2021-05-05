@@ -51,13 +51,12 @@ function animOnScroll(animItems) {
   for (let index = 0; index < animItems.length; index++) {
     const animItem = animItems[index];
     const animItemHeight = animItem.offsetHeight;
-    const animItemOffset = offset(animItem).top;
+    const animItemOffset = offset(animItem).top - animItem.offsetHeight / 2;
     const animStart = 4;
     let animItemPoint = window.innerHeight - animItemHeight / animStart;
     if (animItemHeight > window.innerHeight) {
       animItemPoint = window.innerHeight - window.innerHeight / animStart;
     }
-
     if (
       pageYOffset > animItemOffset - animItemPoint &&
       pageYOffset < animItemOffset + animItemHeight

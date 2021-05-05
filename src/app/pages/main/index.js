@@ -3,7 +3,6 @@ import {
   menuClickHandler,
   parallaxMoveHandler,
   filterCardHandler,
-  onScrollHandler,
   addCardClickHandler,
   onScrollAnimationHandler,
   addCards,
@@ -17,7 +16,6 @@ export function mainPage(rootDiv) {
   menuClickHandler();
   parallaxMoveHandler();
   filterCardHandler();
-  onScrollHandler();
   onScrollAnimationHandler();
   addCertificateClickHandler();
 }

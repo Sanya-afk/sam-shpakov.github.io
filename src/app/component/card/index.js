@@ -17,8 +17,8 @@ export async function addCardClickHandler() {
 }
 
 const onCardItemClick = (pathName) => {
+  window.location.hash = `#${pathName}`;
   window.history.pushState({}, pathName, window.location.origin + pathName);
-  routing();
 };
 
 export async function addCards() {

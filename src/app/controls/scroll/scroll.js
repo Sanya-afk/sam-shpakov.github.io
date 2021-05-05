@@ -6,7 +6,9 @@ export function onScrollHandler() {
     onScroll();
   } else {
     let element = document.getElementById(hash);
+    console.log("element", element);
     if (element) {
+      console.log("scrollIntoView");
       element.scrollIntoView();
     }
   }
@@ -26,11 +28,11 @@ function onScroll() {
           link.querySelector(".navigation__item_link").innerHTML.toLowerCase()
         ) {
           link.classList.add("active");
-          window.history.pushState(
-            {},
-            `/#${link.querySelector("a").innerHTML}`,
-            link.querySelector("a").href
-          );
+          // window.history.pushState(
+          //   {},
+          //   `/#${link.querySelector("a").innerHTML}`,
+          //   link.querySelector("a").href
+          // );
         }
       });
     }
@@ -41,6 +43,7 @@ export function onScrollAnimationHandler() {
   const animItems = document.querySelectorAll(".anim-items");
   setTimeout(() => {
     animOnScroll(animItems);
+    console.log("hash");
   }, 300);
   if (animItems.length > 0) {
     window.onscroll = () => animOnScroll(animItems);

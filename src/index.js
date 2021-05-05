@@ -1,5 +1,16 @@
-import { routing } from './app';
+import Route from "./app";
 
+const app = new Route();
 window.onload = () => {
-  routing();
+  app.routing();
+};
+
+window.onpopstate = () => {
+  console.log("onpopstate");
+  app.routing();
+};
+
+window.onhashchange = () => {
+  console.log("onhashchange");
+  app.routing();
 };

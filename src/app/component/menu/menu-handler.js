@@ -1,5 +1,3 @@
-import { routing } from "../../routing";
-
 export function menuClickHandler() {
   const elem = document.querySelector(".header__menu");
 
@@ -28,8 +26,8 @@ export function logoClickHandler() {
 }
 
 const onLogoClick = () => {
+  window.location.hash = "#";
   window.history.pushState({}, "", window.location.origin);
-  routing();
 };
 
 const clickOnMenuItem = (event) => {
@@ -46,12 +44,12 @@ const clickOnMenuItem = (event) => {
       element.querySelector("a").href
     );
   } else {
+    window.location.hash = `/#${element.querySelector("a").innerHTML}`;
     window.history.pushState(
       {},
       `/#${element.querySelector("a").innerHTML}`,
       element.querySelector("a").href
     );
-    routing();
   }
 };
 

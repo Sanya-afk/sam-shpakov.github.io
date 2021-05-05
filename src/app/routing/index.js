@@ -1,2 +1,3 @@
-export { routing } from './routing';
+import Route from "./routing";
 
+export default Route;

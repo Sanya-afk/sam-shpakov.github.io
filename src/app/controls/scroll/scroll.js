@@ -1,49 +1,43 @@
 export function onScrollHandler() {
-  document.removeEventListener("scroll", onScroll);
-  document.addEventListener("scroll", onScroll);
+  let prevHash = "about";
+  document.onscroll = onScroll(prevHash);
   const hash = window.location.hash.slice(1);
   if (hash === "" || hash === "about") {
-    onScroll();
+    onScroll(prevHash)();
   } else {
     let element = document.getElementById(hash);
-    console.log("element", element);
     if (element) {
-      console.log("scrollIntoView");
       element.scrollIntoView();
     }
   }
 }
 
-function onScroll() {
-  const nav = document.querySelector("header").offsetHeight;
-  const curPos = window.scrollY + nav + 80;
-  const sections = document.querySelectorAll("#root>section");
-  const links = document.querySelectorAll(".navigation__item");
-  sections.forEach((el) => {
-    if (el.offsetTop <= curPos && el.offsetTop + el.offsetHeight > curPos) {
-      links.forEach((link) => {
-        link.classList.remove("active");
-        if (
-          el.id ===
-          link.querySelector(".navigation__item_link").innerHTML.toLowerCase()
-        ) {
-          link.classList.add("active");
-          // window.history.pushState(
-          //   {},
-          //   `/#${link.querySelector("a").innerHTML}`,
-          //   link.querySelector("a").href
-          // );
-        }
-      });
-    }
-  });
-}
+const onScroll = (prevHash) => {
+  return function () {
+    const nav = document.querySelector("header").offsetHeight;
+    const curPos = window.scrollY + nav;
+    const sections = document.querySelectorAll("#root>section");
+    const links = document.querySelectorAll(".navigation__item");
+    sections.forEach((el) => {
+      if (el.offsetTop <= curPos && el.offsetTop + el.offsetHeight > curPos) {
+        links.forEach((link) => {
+          link.classList.remove("active");
+          if (
+            el.id ===
+            link.querySelector(".navigation__item_link").innerHTML.toLowerCase()
+          ) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  };
+};
 
 export function onScrollAnimationHandler() {
   const animItems = document.querySelectorAll(".anim-items");
   setTimeout(() => {
     animOnScroll(animItems);
-    console.log("hash");
   }, 300);
   if (animItems.length > 0) {
     window.onscroll = () => animOnScroll(animItems);

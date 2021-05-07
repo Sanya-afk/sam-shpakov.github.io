@@ -7,7 +7,7 @@ import {
 } from "../../../app";
 import { addProject } from "../../component/";
 
-export async function projectPage(rootDiv, path) {
+export async function projectPage(rootDiv, path, routing) {
   rootDiv.innerHTML = "";
   rootDiv.innerHTML = header;
   let items = await giveInfoItems();
@@ -15,7 +15,7 @@ export async function projectPage(rootDiv, path) {
   if (infoProject) {
     addProject(infoProject, rootDiv);
   }
-  menuClickHandler();
-  logoClickHandler();
+  menuClickHandler(routing);
+  logoClickHandler(routing);
   onScrollAnimationHandler();
 }

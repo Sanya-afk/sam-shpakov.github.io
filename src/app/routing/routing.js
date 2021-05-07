@@ -7,25 +7,23 @@ export default class Route {
 
   routing() {
     let rootDiv = document.getElementById("root");
-    console.log(this.isMain);
     const path = window.location.pathname.slice(1);
-
     switch (path) {
       case "": {
         if (!this.isMain) {
-          mainPage(rootDiv);
+          mainPage(rootDiv, this.routing.bind(this));
         }
         this.isMain = true;
         break;
       }
       case "index.html":
         if (!this.isMain) {
-          mainPage(rootDiv);
+          mainPage(rootDiv, this.routing.bind(this));
         }
         this.isMain = true;
         break;
       default: {
-        projectPage(rootDiv, path);
+        projectPage(rootDiv, path, this.routing.bind(this));
         this.isMain = false;
       }
     }

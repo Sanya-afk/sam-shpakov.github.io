@@ -6,11 +6,5 @@ window.onload = () => {
 };
 
 window.onpopstate = () => {
-  console.log("onpopstate");
-  app.routing();
-};
-
-window.onhashchange = () => {
-  console.log("onhashchange");
   app.routing();
 };

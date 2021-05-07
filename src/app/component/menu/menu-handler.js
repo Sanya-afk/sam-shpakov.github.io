@@ -1,6 +1,5 @@
-export function menuClickHandler() {
+export function menuClickHandler(routing) {
   const elem = document.querySelector(".header__menu");
-
   if (elem) {
     elem.addEventListener("click", (event) => {
       changeHeaderLogo();
@@ -10,27 +9,27 @@ export function menuClickHandler() {
       }
       if (isClickOnMenuItem(event)) {
         closeMenu();
-        clickOnMenuItem(event);
+        clickOnMenuItem(event, routing);
       }
     });
   }
 }
 
-export function logoClickHandler() {
+export function logoClickHandler(routing) {
   const elem = document.querySelector(".header__logo");
   if (elem) {
     elem.addEventListener("click", () => {
-      onLogoClick();
+      onLogoClick(routing);
     });
   }
 }
 
-const onLogoClick = () => {
-  window.location.hash = "#";
+const onLogoClick = (routing) => {
   window.history.pushState({}, "", window.location.origin);
+  routing();
 };
 
-const clickOnMenuItem = (event) => {
+const clickOnMenuItem = (event, routing) => {
   event.preventDefault();
   let element = event.target.closest("li");
   let elementToScroll = document.getElementById(
@@ -44,12 +43,12 @@ const clickOnMenuItem = (event) => {
       element.querySelector("a").href
     );
   } else {
-    window.location.hash = `/#${element.querySelector("a").innerHTML}`;
     window.history.pushState(
       {},
       `/#${element.querySelector("a").innerHTML}`,
       element.querySelector("a").href
     );
+    routing();
   }
 };
 

@@ -9,11 +9,11 @@ import {
   addCertificateClickHandler,
 } from "../../../app";
 
-export function mainPage(rootDiv) {
+export function mainPage(rootDiv, routing) {
   rootDiv.innerHTML = mainHTML;
   addCards();
-  addCardClickHandler();
-  menuClickHandler();
+  addCardClickHandler(routing);
+  menuClickHandler(routing);
   parallaxMoveHandler();
   filterCardHandler();
   onScrollAnimationHandler();

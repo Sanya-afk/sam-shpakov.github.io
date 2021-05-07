@@ -1,24 +1,23 @@
 import { giveInfoItems } from "../../common";
 import { generateCards } from "./add-card";
-import { routing } from "../../routing";
 import { onScrollHandler } from "../../controls";
 
-export async function addCardClickHandler() {
+export async function addCardClickHandler(routing) {
   await giveInfoItems();
   const elem = document.querySelector(".filter-container");
   if (elem) {
     elem.addEventListener("click", (event) => {
       event.preventDefault();
       if (event.target.closest(".card")) {
-        onCardItemClick(`/${event.target.closest(".card").id}`);
+        onCardItemClick(`/${event.target.closest(".card").id}`, routing);
       }
     });
   }
 }
 
-const onCardItemClick = (pathName) => {
-  window.location.hash = `#${pathName}`;
+const onCardItemClick = (pathName, routing) => {
   window.history.pushState({}, pathName, window.location.origin + pathName);
+  routing();
 };
 
 export async function addCards() {

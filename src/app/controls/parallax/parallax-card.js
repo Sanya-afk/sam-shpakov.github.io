@@ -1,6 +1,7 @@
 import VanillaTilt from 'vanilla-tilt';
 
 export function parallaxCardHandler(element) {
+  const card = element.querySelector('.card');
   let prefix = '';
   if (navigator.userAgent.indexOf('Edg') != -1) {
     prefix = '-webkit-';
@@ -16,7 +17,7 @@ export function parallaxCardHandler(element) {
   if (prefix === '') {
     return;
   }
-  VanillaTilt.init(element, {
+  VanillaTilt.init(card, {
     max: 10,
     reverse: false,
     speed: 1000,

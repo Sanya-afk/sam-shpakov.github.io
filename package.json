@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.13.17",
-    "mdbootstrap": "^4.19.2"
+    "mdbootstrap": "^4.19.2",
+    "vanilla-tilt": "^1.7.0"
   }
 }

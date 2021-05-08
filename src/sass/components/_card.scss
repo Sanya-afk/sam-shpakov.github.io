@@ -14,6 +14,10 @@
   box-shadow: $card-shadow;
   border-radius: 2px;
 
+  &:hover {
+    z-index: 2;
+  }
+
   &__title {
     position: absolute;
     left: 0;

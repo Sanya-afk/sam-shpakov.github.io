@@ -1,7 +1,16 @@
+import VanillaTilt from 'vanilla-tilt';
+
 export function parallaxCardHandler(element) {
-  element.onmousemove = transformElement(element, element.children[0]);
-  element.onmouseenter = handleMouseEnter(element.children[0]);
-  element.onmouseleave = handleMouseLeave(element.children[0]);
+  const card = element.querySelector('.card');
+  VanillaTilt.init(card, {
+    max: 10,
+    speed: 1000,
+    perspective: 700,
+    scale: 1.2,
+    transition: true,
+    gyroscope: true,
+    reset: true,
+  });
 }
 
 function transformElement(elementOne, elementTwo) {
@@ -44,7 +53,6 @@ function transformElement(elementOne, elementTwo) {
       'deg) rotateX(' +
       percentY * transformAmount +
       'deg)  scale(1.2)';
-
   };
 }
 function handleMouseEnter(element) {

@@ -9,7 +9,6 @@
   align-items: center;
   background: $color-card;
   background-size: cover;
-  transform: perspective(400px) rotateX(0deg) rotateY(0deg);
   transform-style: preserve-3d;
   box-shadow: $card-shadow;
   border-radius: 2px;
@@ -29,7 +28,7 @@
     opacity: 0;
     transition: opacity 0.7s;
     font-size: 1.5rem;
-    transform: translateZ(80px) scale(0.8);
+    transform: translateZ(80px);
     transform-style: preserve-3d;
     overflow-wrap: break-word;
   }

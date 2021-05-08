@@ -1,6 +1,5 @@
 export function filterCardHandler() {
-  const filterCollection = document.querySelector('.portfolios_filter')
-    .children;
+  const filterCollection = document.querySelector('.portfolio_filter').children;
   for (let i = 0; i < filterCollection.length; i += 1) {
     filterCollection[i].addEventListener('click', () => {
       filterSelection(filterCollection[i]);

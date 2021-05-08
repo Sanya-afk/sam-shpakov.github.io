@@ -17,8 +17,8 @@ let header = `
             <a href="/#about" class="navigation__item_link">about</a>
           </li>
           <li class="navigation__item">
-            <a href="/#portfolios" class="navigation__item_link"
-              >portfolios</a
+            <a href="/#portfolio" class="navigation__item_link"
+              >portfolio</a
             >
           </li>
           <li class="navigation__item">

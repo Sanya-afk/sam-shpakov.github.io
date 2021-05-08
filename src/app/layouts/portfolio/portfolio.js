@@ -1,8 +1,8 @@
-let portfolios = `
-<section class="portfolios" id="portfolios">
-<h4 class="portfolios__name anim-items">portfolios</h4>
-<div class="wrapper portfolios__wrapper">
-  <ul class="portfolios_filter anim-items">
+let portfolio = `
+<section class="portfolio" id="portfolio">
+<h4 class="portfolio__name anim-items">portfolio</h4>
+<div class="wrapper portfolio__wrapper">
+  <ul class="portfolio_filter anim-items">
     <li class="active-tab" data-filter="all"><a>All</a></li>
     <li data-filter="javascript"><a>JavaScript</a></li>
     <li data-filter="typescript"><a>Typescript</a></li>
@@ -16,4 +16,4 @@ let portfolios = `
 </section>
 `;
 
-export { portfolios };
+export { portfolio };

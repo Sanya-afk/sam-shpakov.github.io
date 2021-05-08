@@ -1,4 +1,4 @@
-.portfolios {
+.portfolio {
   padding: 30px 0;
   background-color: transparent;
   padding-top: 80px;
@@ -35,6 +35,7 @@
 
     transform: scale(0);
     transition: all 0.8s ease 0s;
+
     li {
       color: $light-gray;
       cursor: pointer;
@@ -59,6 +60,10 @@
     margin: 0 5px;
     min-height: 350px;
 
+    @media (max-width: $content-width + 7.2) {
+      margin: 0 50px;
+    }
+
     @media (max-width: $tablet-width) {
       flex-direction: column;
       justify-content: flex-start;
@@ -74,8 +79,6 @@
       background-color: #fff;
       border-radius: 2px;
       box-shadow: $card-shadow;
-      transition: height 350ms ease-in-out, width 350ms ease-in-out,
-        padding 350ms ease-in-out;
       overflow: hidden;
       display: none;
 

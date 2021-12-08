@@ -22,7 +22,7 @@ let experience = `
             <h3>Freelancer</h3>
           </div>
           <p class="sub-heading">Any companies</p>
-          <p class="sub-heading">May 2020 - Present Time</p>
+          <p class="sub-heading">June 2019 - Present Time</p>
           <p class="content-p">
             Main responsibilities: layout development from scratch
             scripting

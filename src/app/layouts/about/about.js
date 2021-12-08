@@ -6,7 +6,7 @@ let about = `
       Hey! I’m Sam.
     </h2>
     <p class="start-screen__content_subheading anim-items">
-      Software engineer with 1+ years of experience, specializing in front-end and back-end development. Experienced
+      Software engineer with 2+ years of experience, specializing in front-end and back-end development. Experienced
       with all stages of the development cycle for dynamic web projects.
     </p>
     <div>
